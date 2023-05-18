@@ -37,7 +37,7 @@ import { portfolio } from './portfolio.js';
     `
   }
 
-  // Add completed items
+  // Items parent container
   let allItems = ``
 
   portfolio.map( item => {
