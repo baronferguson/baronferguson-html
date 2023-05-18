@@ -1,0 +1,10 @@
+/* Variables */
+:root {
+  --serif: serif;
+  --sans-serif: sans-serif;
+  --black: #1c1c1c;
+  --gray: #282828;
+  --lt-gray: #C4C4C4;
+  --general-margin: 1.5rem;
+  --transition-timing: 150ms;
+}

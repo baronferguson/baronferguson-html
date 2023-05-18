@@ -1,0 +1,14 @@
+.media__featured {
+  display: table;
+  margin: 0 auto;
+}
+.media__featured img {
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  object-position: center center;
+  margin: 0 auto;
+}

@@ -1,0 +1,29 @@
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+	font-size: 2rem;
+  font-weight: 300;text-align: center;
+}
+
+h1 {
+  font-size: clamp(2rem, 10vw, 180px); 
+}
+h2 {
+  font-size: clamp(4rem, 7.5vw, 150px); 
+  opacity: .85;
+  text-shadow: 0 0 4rem rgba(var(--black), .75);
+  margin: 1rem auto;
+  max-width: 80%;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: clamp(2rem, 15vw, 180px); 
+  }
+  h2 {
+    font-size: clamp(2rem, 10vw, 160px); 
+    margin: 0 auto;
+  }
+}

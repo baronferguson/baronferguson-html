@@ -1,0 +1,16 @@
+@media screen and (min-width: 768px) {
+  .item {
+    min-height: 75vh;
+  }
+  .item:not(:last-child) {
+    margin-bottom: clamp(2rem, 7.5vw, 180px); ;
+  }
+}
+
+.item h2 {
+  pointer-events: none;
+}
+.item__info {
+  display: flex;
+  justify-content: center;
+}

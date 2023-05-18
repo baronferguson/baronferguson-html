@@ -1,0 +1,27 @@
+.outbound-link {
+  border: 1px rgba(255, 255, 255, .75) solid;
+  border-radius: 3px;
+  Border-radius:100vmin;
+  padding: .5rem .75rem;
+  cursor: pointer;
+  text-align: center;
+  max-width: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: linear var(--transition-timing) background-color;
+  align-self: flex-start;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.165);
+  transform: translateX(-25%) translateY(25%)
+}
+.outbound-link--dark {
+  background-color: rgba(0, 0, 0, .45);
+}
+.outbound-link:hover {
+  background-color: rgba(0, 0, 0, .15);
+}
+.outbound-link--dark:hover {
+  background-color: rgba(0, 0, 0, .65);
+}

@@ -1,0 +1,17 @@
+.primary {
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
+  row-gap: var(--general-margin);
+}
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+  overflow: hidden;
+}
+footer {
+  grid-area: footer;
+}

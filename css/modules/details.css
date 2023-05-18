@@ -1,0 +1,68 @@
+details {
+  font-family: var(--sans-serif);
+  position: relative;
+  text-align: center;
+}
+details summary {
+  border: 1px var(--lt-gray) solid;
+  border-radius: 3px;
+  Border-radius:100vmin;
+  padding: .5rem .75rem;
+  cursor: pointer;
+  text-align: center;
+  max-width: 100px;
+  display: inline-flex;
+  transition: linear var(--transition-timing) background-color;
+  align-items: flex-start;
+}
+details summary:hover,
+details[open] summary{
+  background-color: var(--gray);
+}
+
+details summary::marker {
+  content: '';
+  display: none;
+}
+details summary::-webkit-details-marker {
+  content: '';
+  display: none;
+}
+
+details summary::before {
+  content: url(../../img/chevron.svg);
+  margin-right: .5rem;
+  width: 12px;
+  flex: 0 0 12px;
+  transition: ease-out calc(var(--transition-timing) * 1.5) transform;
+  transform: rotate(0deg) translateY(-10%);
+  display: inline-block;
+}
+details[open] summary::before {
+  transform: rotate(-180deg) translateY(-10%);
+}
+
+details ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.5rem;
+  row-gap: .5rem;
+  flex-flow: row wrap;
+  padding: .5rem 0;
+  margin-top: calc(var(--general-margin) * .35);
+}
+details[open] ul {
+  opacity: 1;
+}
+details li {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+details li span {
+  display: block;
+}
+details li span:first-letter {
+  text-transform: uppercase;
+}

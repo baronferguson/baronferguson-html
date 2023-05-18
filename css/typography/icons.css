@@ -1,0 +1,26 @@
+svg {
+  fill: var(--lt-gray);
+}
+
+.icon-design {
+  width: 15px
+}
+.icon-code {
+  width: 18px
+}
+.icon-wordpress {
+  width: 17px;
+}
+.icon-shopify {
+  width: 15px;
+}
+.icon-motion {
+  width: 15px;
+}
+.icon-note {
+  width: 15px;
+}
+.icon-link {
+  width: 13px;
+  fill: rgba(255, 255, 255, .85)
+}
