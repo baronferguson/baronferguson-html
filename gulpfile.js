@@ -41,10 +41,10 @@ const minJS = () =>
     
     .pipe(dest('./js'));
 
-const build = series(bundleCSS, minCSS, minJS)
+const minAll = series(minCSS, minJS)
 
 // Exports
-exports.default = build;
-exports.css = bundleCSS;
-exports.minCSS = minCSS;
+exports.css = bundleCSS; // Run First
+exports.minAll = minAll;
+exports.minCSS = minCSS; 
 exports.minJS = minJS;
