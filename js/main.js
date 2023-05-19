@@ -55,7 +55,7 @@ import { portfolio } from './portfolio.js';
       }
 
       if(value == true) {
-        detailList += `<li>${detailMap[key]} <span>${keyDisplay}`
+        detailList += `<li>${detailMap[key]} <span>${keyDisplay}</span></li>`
       }
       
     }   
