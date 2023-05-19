@@ -5,46 +5,46 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 
 // Bundle CSS
-const bundleCSS = async () => {
-  src([
+function bundleCSS() {
+  return src([
     './css/required.css',
     './css/**/**.css',
   ])
     .pipe(concatCSS('style.css', {
       inlineImports: false,
-
     }))
     .pipe(dest('./dist'));
 }
 
 // Minify CSS
-const minCSS = async () =>
-  src([
+function minCSS() {
+  return src([
     './dist/style.css',
   ])
     .pipe(cleanCSS())
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(dest('./dist'));    
+    .pipe(dest('./dist')); 
+}
+     
 
 // Minify JS
-const minJS = () => 
-  src('js/main.js')
-    .pipe(minifyJS({
-      noSource: true,
-      ext:{
-        min:'.min.js'
-      },
-      ignoreFiles: ['-min.js, .min.js'],
-    }))
-    
-    .pipe(dest('./js'));
-
-const minAll = series(minCSS, minJS)
+function minJS() {
+  return src('./js/main.js')
+  .pipe(minifyJS({
+    noSource: true,
+    ext:{
+      min:'.min.js'
+    },
+    ignoreFiles: ['-min.js, .min.js'],
+  }))
+  .pipe(dest('./js'));
+}
 
 // Exports
-exports.css = bundleCSS; // Run First
-exports.minAll = minAll;
-exports.minCSS = minCSS; 
-exports.minJS = minJS;
+exports.default = series(minJS,bundleCSS,minCSS);
+exports.watch = function() { 
+  watch(['css/**/**.css'],series(bundleCSS,minCSS));
+  watch(['./js/main.js'], minJS);
+}
